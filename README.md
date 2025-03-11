@@ -25,7 +25,7 @@ ampEnv.gain.value = 0.0;
 
 ## Implementing the ADSR Envelope
 
-### Attack Component
+### Attack Component in `startNote()`
 
 ```javascript
 // Saves the current time reference
@@ -38,7 +38,7 @@ ampEnv.gain.setValueAtTime(ampEnv.gain.value, now);
 ampEnv.gain.linearRampToValueAtTime(1.0, now + attack);
 ```
 
-### Decay Component
+### Decay Component in `startNote()`
 
 ```javascript
 // Decreases gain to the sustain level after attack phase
